@@ -17,7 +17,16 @@ enum GameState{
 }
 
 class Tile{
+    private _isCovered:boolean = true;
+    public tileSprite:Node;
+    public position:{row:number, column:number}
     
+    onMouseClick(){
+        if(this._isCovered){
+            this._isCovered = false;
+            //this.tileSprite.opacity = 0;
+        }
+    }
 }
 
 class Gem{
