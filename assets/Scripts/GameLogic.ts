@@ -20,6 +20,22 @@ class Tile{
     
 }
 
+class Gem{
+
+}
+
+class GemSmall extends Gem{
+
+}
+
+class GemMedium extends Gem{
+
+}
+
+class GemLarge extends Gem{
+
+}
+
 @ccclass('GameLogic')
 export class GameLogic extends Component {
 
@@ -63,8 +79,8 @@ export class GameLogic extends Component {
         this.setCurrentState(GameState.GS_PLAYING);
     }
 
-    generateField(){
-
+    generateField(fieldHeight:number = FIELD_HEIGHT, fieldWidth:number = FIELD_WIDTH, gemsArray:Gem[]){
+        
     }
 
     setCurrentState(value:GameState){
