@@ -20,7 +20,7 @@ class Tile{
     private _isCovered:boolean = true;
     public tileSprite:Node;
     public position:{row:number, column:number}
-    
+
     onMouseClick(){
         if(this._isCovered){
             this._isCovered = false;
@@ -30,7 +30,19 @@ class Tile{
 }
 
 class Gem{
+    public position:{row:number, column:number}
+    public height:number;
+    public width:number;
+    private _isCovered:boolean = true;
+    private _field:Node;
 
+    constructor({position:{row, column}, height, width, field}){
+        this._field = field;
+    }
+
+    checkCover(){
+        this._isCovered = this._field.checkCover(this);
+    }
 }
 
 class GemSmall extends Gem{
